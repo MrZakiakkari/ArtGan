@@ -16,6 +16,6 @@ def test_generator(generator):
     assert generated_image.shape == (1, 128, 128, 3)
 
 def test_discriminator(discriminator):
-    image = tf.random.normal([1, 128, 128, 1])
+    image = tf.random.normal([1, 128, 128, 3])
     decision = discriminator(image)
     assert decision.shape == (1, 1)
